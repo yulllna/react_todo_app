@@ -1,0 +1,13 @@
+.todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+.textWrap {
+    display: flex;
+    align-items: center;
+}
+.textContent {
+    padding-left: 8px;
+}

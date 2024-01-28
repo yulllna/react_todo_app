@@ -1,11 +1,10 @@
 import { React } from 'react';
+import styles from './Button.module.css';
 
 export default function Buttons(props) {
     const {isSelect, name} = props;
 
     return (
-      <div className='button'>
-        <button className={isSelect? 'active' : ''}>{name}</button>
-      </div>
+      <button className={styles.topButton + (isSelect? styles.topButtonActive : '')}>{name}</button>
     );
 }

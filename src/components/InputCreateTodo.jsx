@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './InputCreateTodo.module.css';
 
 const InputCreateTodo = () => {
     return (
-        <div className='input-wrap'>
-            <input type="text" />
-            <button className='complete-btn'>Add</button>
+        <div className={styles.inputWrap}>
+            <input type="text" placeholder='Add Todo' />
+            <button className={styles.completeBtn}>Add</button>
         </div>
     );
 };

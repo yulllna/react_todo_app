@@ -1,0 +1,19 @@
+.topButton {
+    color: #AEC670;
+    font-weight: 700;
+    opacity: 0.8;
+  }
+  .topButtonActive {
+    opacity: 1;
+    color: #AEC670;
+    font-weight: 700;
+    position: relative;
+  }
+  .topButtonActive::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: red;
+  }

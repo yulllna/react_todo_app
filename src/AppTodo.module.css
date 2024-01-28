@@ -1,0 +1,42 @@
+:global body {
+  font-family: 'Noto Sans', sans-serif;
+}
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.appTodo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.appTodoWrap {
+  width: 80%;
+  border-radius: 12px;
+}
+.appHeader {
+  background: #1A2902;
+  padding: 16px;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px 12px 0 0;
+}
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+.todoList {
+  padding: 16px;
+  border-top: 1px solid #AEC09A;
+  background-color: #344C11;
+  color: #FFF;
+  height: 20vh;
+  overflow: auto;
+}

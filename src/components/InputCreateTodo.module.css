@@ -1,0 +1,20 @@
+.inputWrap {
+    background: #1A2902;
+    padding: 16px;
+    display: flex;
+    border-radius: 0 0 12px 12px;
+}
+.inputWrap input {
+    border: 0;
+    border-radius: 4px 0 0 4px;
+    padding: 8px;
+    width: 80%;
+
+}
+.completeBtn {
+    width: 20%;
+    color: #FFF;
+    background: #AEC670;
+    border-radius: 0 4px 4px 0;
+    font-weight: 700;
+}
