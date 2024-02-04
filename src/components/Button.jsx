@@ -15,8 +15,7 @@ export default function Buttons(props) {
       setButtonList(updatedButtonList);
   }
     
-
     return (
-      <button className={styles.topButton + (isSelect? styles.topButtonActive : '')} onClick={changeButtonList}>{name}</button>
+      <button className={`${styles.topButton} ${isSelect ? styles.active : ''}`} onClick={changeButtonList}>{name}</button>
     );
 }

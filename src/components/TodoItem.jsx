@@ -5,10 +5,14 @@ import { IoCheckbox } from "react-icons/io5";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 
 const TodoItem = (props) => {
-    const {isCheck, text, id, onDelete, index, updateTodoList} = props;
+    const {isCheck, text, id, updateTodoList, deleteTodoItem} = props;
 
     const changeCheckState = () => {
         updateTodoList(id)
+    }
+
+    const deleteItem = () => {
+        deleteTodoItem(id)
     }
 
     return (
@@ -17,10 +21,8 @@ const TodoItem = (props) => {
                 <div onClick={changeCheckState}>{isCheck ? <IoCheckbox/> : <MdCheckBoxOutlineBlank />}</div>
                 <p className={styles.textContent}>{text}</p>
             </div>
-            <div className='delete-icon' 
-                onClick={() => {
-                    onDelete(index);
-                }}><RiDeleteBin5Fill color='#FFF' /></div>
+            <div className={styles.deleteIcon} 
+                onClick={deleteItem}><RiDeleteBin5Fill color='#FFF' /></div>
         </div>
     );
 };

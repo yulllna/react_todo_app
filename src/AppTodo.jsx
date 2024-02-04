@@ -6,6 +6,7 @@ import InputCreateTodo from './components/InputCreateTodo';
 import { createGlobalStyle } from 'styled-components';
 import reset from "styled-reset";
 import styles from './AppTodo.module.css';
+import { DarkModeProvider } from './context/darkModeContext';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -41,6 +42,14 @@ function App() {
   });
 };
 
+const deleteTodoItem = (id) => {
+  setTodoList(prev => {
+    const updatedList = prev.filter(todo => todo.id !== id);
+    localStorage.setItem('todoList', JSON.stringify(updatedList));
+    return updatedList;
+});
+}
+
   useEffect(() => {
     if (localStorage.todoList){
       setTodoList(JSON.parse(localStorage.todoList));
@@ -48,10 +57,8 @@ function App() {
     }
   }, [setTodoList]);
 
-  const handleDelete = (key) => setTodoList(todoList.filter(todoItem => todoItem.id !== key));
-
   return (
-    <>
+    <DarkModeProvider>
       <GlobalStyle />
       <div className={styles.appTodo}>
         <div className={styles.appTodoWrap}>
@@ -76,14 +83,14 @@ function App() {
                 }
               })
               .map(todoItem => {
-                return <TodoItem isCheck={todoItem.isCheck} text={todoItem.text} key={todoItem.id} id={todoItem.id} index={todoItem.id} onDelete={handleDelete} updateTodoList={updateTodoList}/>
+                return <TodoItem isCheck={todoItem.isCheck} text={todoItem.text} key={todoItem.id} id={todoItem.id} updateTodoList={updateTodoList}deleteTodoItem={deleteTodoItem}/>
               })
             }
           </div>
           <InputCreateTodo totalTodoList={todoList} setTotalTodoList={setTodoList}/>
         </div>
       </div>
-    </>
+    </ DarkModeProvider>
   );
 }
 

@@ -11,3 +11,11 @@
 .textContent {
     padding-left: 8px;
 }
+.deleteIcon {
+    transform: rotate(0deg);
+    transition: all ease-in-out;
+}
+.deleteIcon:hover {
+    transform: rotate(45deg);
+    transition: all ease-in-out;
+}
