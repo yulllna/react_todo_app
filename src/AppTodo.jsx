@@ -50,12 +50,14 @@ const deleteTodoItem = (id) => {
 });
 }
 
-  useEffect(() => {
-    if (localStorage.todoList){
-      setTodoList(JSON.parse(localStorage.todoList));
-      console.log(todoList);
-    }
-  }, [setTodoList]);
+useEffect(() => {
+  if (localStorage.todoList){
+    setTodoList(prevTodoList => {
+      const updatedList = JSON.parse(localStorage.todoList);
+      return updatedList;
+    });
+  }
+}, []);
 
   return (
     <DarkModeProvider>
