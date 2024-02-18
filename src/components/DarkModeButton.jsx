@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
-import { DarkModeContext } from '../context/darkModeContext';
+import { DarkModeContext } from '../context/DarkModeContext';
 
 export default function DarkModeButton() {
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
     let button;
     if (!darkMode) {
-        button = <MdLightMode color='#FFF' />
-    } else {
         button = <MdDarkMode />
+    } else {
+        button = <MdLightMode color='#FFF' />
     }
 
     return (

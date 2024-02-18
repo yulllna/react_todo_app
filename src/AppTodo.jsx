@@ -6,7 +6,7 @@ import InputCreateTodo from './components/InputCreateTodo';
 import { createGlobalStyle } from 'styled-components';
 import reset from "styled-reset";
 import styles from './AppTodo.module.css';
-import { DarkModeProvider } from './context/darkModeContext';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

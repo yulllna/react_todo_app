@@ -1,5 +1,5 @@
 .inputWrap {
-    background: #1A2902;
+    background: var(--color-bg-header);
     padding: 16px;
     display: flex;
     border-radius: 0 0 12px 12px;
@@ -14,7 +14,7 @@
 .completeBtn {
     width: 20%;
     color: #FFF;
-    background: #AEC670;
+    background: var(--color-bg-btn);
     border-radius: 0 4px 4px 0;
     font-weight: 700;
 }

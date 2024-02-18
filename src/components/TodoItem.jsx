@@ -22,7 +22,7 @@ const TodoItem = (props) => {
                 <p className={styles.textContent}>{text}</p>
             </div>
             <div className={styles.deleteIcon} 
-                onClick={deleteItem}><RiDeleteBin5Fill color='#FFF' /></div>
+                onClick={deleteItem}><RiDeleteBin5Fill color='var(--color-font-content)' /></div>
         </div>
     );
 };
